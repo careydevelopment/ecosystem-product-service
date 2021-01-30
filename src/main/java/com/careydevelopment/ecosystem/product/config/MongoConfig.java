@@ -20,8 +20,8 @@ public class MongoConfig extends AbstractMongoClientConfiguration {
     @Value("${mongo.db.name}") 
     private String productDb;
     
-    @Value("${ecosystem.properties.file.location}")
-    private String ecosystemPropertiesFile;
+    @Value("${product.properties.file.location}")
+    private String productPropertiesFile;
     
     @Override
     protected String getDatabaseName() {
@@ -32,7 +32,7 @@ public class MongoConfig extends AbstractMongoClientConfiguration {
     @Override
     @Bean
     public MongoClient mongoClient() {
-        PropertiesUtil propertiesUtil = new PropertiesUtil(ecosystemPropertiesFile);
+        PropertiesUtil propertiesUtil = new PropertiesUtil(productPropertiesFile);
         String connectionString = propertiesUtil.getProperty("mongodb.carey-product.connection");
         String fullConnectionString = connectionString + "/" + productDb;
         

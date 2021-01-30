@@ -31,26 +31,6 @@ public class ApplicationListenerInitialize implements ApplicationListener<Applic
     private ProductRepository productRepo;
     
     public void onApplicationEvent(ApplicationReadyEvent event) {
-        try {
-            
-            System.err.println("done");
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
     }
-    
-    
-    private LineOfBusiness lob(List<LineOfBusiness> lobs, String lobCode) {
-        LineOfBusiness lob = null;
         
-        for (LineOfBusiness line : lobs) {
-            if (line.getCode().equals(lobCode)) {
-                lob = line;
-                break;
-            }
-        }
-        
-        return lob;
-    }
-    
 }
