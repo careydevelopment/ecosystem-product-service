@@ -25,16 +25,16 @@ Some info, like the JWT secret and the MongoDB connection string, are located in
 The locations of the external properties files are specified in the `application.properties` file. Look for the `ecosystem.properties.file.location` and the `product.properties.file.location` properties.
 
 Here's a list of the properties in that `ecosystem.properties` file:
-* jwt.secret - the secret used to sign JWTs
-* mongodb.carey-ecosystem.connection - the connection string to get to the MongoDB (in the format: mongodb://name:password@server:port)
-* ecosystem-user-service.endpoint - the base URL to <a href="https://github.com/careydevelopment/ecosystem-user-service">the user service</a>
-* customer-service.endpoint - the base URL to <a href="https://github.com/careydevelopment/ecosystem-customer-service">the customer service.</a>
-* geo-service.endpoint - the base URL to state and country lookups (currently private repo).
-* product-service.endpoint - the base URL to <a href="https://github.com/careydevelopment/ecosystem-product-service">the product service.</a>
-* crm-service.endpoint - the base URL to <a href="https://github.com/careydevelopment/crm-service">the CRM service.</a> 
+* `jwt.secret` - the secret used to sign JWTs
+* `mongodb.carey-ecosystem.connection` - the connection string to get to the MongoDB (in the format: mongodb://name:password@server:port)
+* `ecosystem-user-service.endpoint` - the base URL to <a href="https://github.com/careydevelopment/ecosystem-user-service">the user service</a>
+* `customer-service.endpoint` - the base URL to <a href="https://github.com/careydevelopment/ecosystem-customer-service">the customer service.</a>
+* `geo-service.endpoint` - the base URL to state and country lookups (currently private repo).
+* `product-service.endpoint` - the base URL to <a href="https://github.com/careydevelopment/ecosystem-product-service">the product service.</a>
+* `crm-service.endpoint` - the base URL to <a href="https://github.com/careydevelopment/crm-service">the CRM service.</a> 
 
 The `product.properties` file simply contains a URL to the MongoDB:
-* mongodb.carey-product.connection=mongodb://user:password@mycoolhost.com:1100
+* `mongodb.carey-product.connection=mongodb://user:password@mycoolhost.com:1100`
 
 
 ## Dependencies
