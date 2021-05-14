@@ -7,7 +7,6 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.data.mongodb.config.AbstractMongoClientConfiguration;
 import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
 
-import com.careydevelopment.ecosystem.product.util.PropertiesUtil;
 import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoClients;
 
@@ -20,8 +19,8 @@ public class MongoConfig extends AbstractMongoClientConfiguration {
     @Value("${mongo.db.name}") 
     private String productDb;
     
-    @Value("${product.properties.file.location}")
-    private String productPropertiesFile;
+    @Value("${mongodb.carey-product.connection}")
+    private String connectionString;
     
     @Override
     protected String getDatabaseName() {
@@ -32,8 +31,6 @@ public class MongoConfig extends AbstractMongoClientConfiguration {
     @Override
     @Bean
     public MongoClient mongoClient() {
-        PropertiesUtil propertiesUtil = new PropertiesUtil(productPropertiesFile);
-        String connectionString = propertiesUtil.getProperty("mongodb.carey-product.connection");
         String fullConnectionString = connectionString + "/" + productDb;
         
         MongoClient client = MongoClients.create(fullConnectionString);
