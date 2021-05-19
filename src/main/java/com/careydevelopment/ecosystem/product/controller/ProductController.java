@@ -17,7 +17,6 @@ import org.springframework.web.bind.annotation.RestController;
 import com.careydevelopment.ecosystem.product.model.Product;
 import com.careydevelopment.ecosystem.product.repository.ProductRepository;
 
-@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/products")
 public class ProductController {
